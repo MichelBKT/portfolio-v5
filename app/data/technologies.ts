@@ -60,7 +60,7 @@ export const technologies: TechData = {
       projects: ['Portfolio', 'Agilix'],
       recentlyLearned: true,
       inMyJob: false,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-indigo-500'
     },
     {
       name: 'MongoDB',
@@ -142,7 +142,7 @@ export const technologies: TechData = {
       projects: ['Développement'],
       recentlyLearned: false,
       inMyJob: true,
-      color: 'from-pink-500 to-purple-600'
+      color: 'from-indigo-500 to-purple-600'
     },
     {
       name: 'MySQL',

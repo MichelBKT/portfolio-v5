@@ -79,12 +79,12 @@ onMounted(() => {
                 </div>
 
                 <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  Une formation solide avant tout, avec une spécialisation en <br>
-                  <span class="gradient-text">Big Data</span>
+                  Vers une spécialisation en tant que
+                  <span class="gradient-text">Data engineer</span>
                 </h1>
 
                 <p class="text-white/70 text-lg max-w-xl">
-                  Avec un passé en tant que comptable, ce choix de spécialisation est comme une évidence. La gestion et l'analyse des données sont des compétences clés dans le domaine de la comptabilité. Je peux ainsi combiner mes connaissances comptables avec des compétences techniques avancées pour mieux comprendre et exploiter les données financières. Cela me permettra de contribuer de manière significative à la prise de décisions stratégiques basées sur des analyses de données approfondies.
+                  Avec un passé de comptable, ce choix est comme une évidence. La gestion et l'analyse des données sont des compétences clés dans le domaine de la comptabilité. Je peux ainsi combiner mes connaissances comptables avec des compétences techniques avancées pour mieux comprendre et exploiter les données financières. Cela me permettra de contribuer de manière significative à la prise de décisions stratégiques basées sur des analyses de données approfondies.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
@@ -109,7 +109,7 @@ onMounted(() => {
               <!-- Right Content - Featured Image -->
               <div class="relative">
                 <div class="glass-card p-8 rounded-3xl">
-                  <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center relative">
+                  <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/20 to-indigo-600/20 flex items-center justify-center relative">
                     <!-- Default State -->
                     <div v-if="!isGenerating && !showImage" class="text-center space-y-4">
                       <span class="icon-[tabler--robot] text-purple-400 size-32"/>
@@ -127,7 +127,7 @@ onMounted(() => {
                       <!-- Progress Bar -->
                       <div class="space-y-3">
                         <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                          <div class="ai-progress-bar h-full bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500"/>
+                          <div class="ai-progress-bar h-full bg-gradient-to-r from-purple-500 via-indigo-500 to-purple-500"/>
                         </div>
                         <p class="text-purple-300 text-sm font-medium animate-pulse">Generating your masterpiece...</p>
                       </div>
@@ -160,7 +160,7 @@ onMounted(() => {
                   </div>
                 </div>
                 <!-- Floating decoration -->
-                <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full blur-3xl opacity-50 animate-pulse"/>
+                <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full blur-3xl opacity-50 animate-pulse"/>
                 <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full blur-3xl opacity-50 animate-pulse" style="animation-delay: 1s;"/>
               </div>
             </div>
@@ -312,7 +312,7 @@ onMounted(() => {
 
               <!-- Experience Badge Card -->
               <div class="glass-card p-6 overflow-hidden relative">
-                <div class="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-purple-600/30 to-pink-600/30 flex items-center justify-center">
+                <div class="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-purple-600/30 to-indigo-600/30 flex items-center justify-center">
                   <div class="text-center space-y-2">
                     <div class="text-6xl font-bold text-white">2+</div>
                     <div class="text-white/70 text-sm">Années d'expérience</div>

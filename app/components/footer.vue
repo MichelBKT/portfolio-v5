@@ -29,9 +29,10 @@
         <div>
           <h6 class="text-white font-semibold mb-4">Navigation</h6>
           <nav class="flex flex-col space-y-2">
-            <a href="#home" class="text-white/70 hover:text-white transition-colors text-sm">Accueil</a>
-            <a href="#competences" class="text-white/70 hover:text-white transition-colors text-sm">Compétences</a>
+            <a href="/" class="text-white/70 hover:text-white transition-colors text-sm">Accueil</a>
+            <a href="/about" class="text-white/70 hover:text-white transition-colors text-sm">A propos</a>
             <a href="#projets" class="text-white/70 hover:text-white transition-colors text-sm">Projets</a>
+            <a href="#blog" class="text-white/70 hover:text-white transition-colors text-sm">Blog</a>
             <a href="#contact" class="text-white/70 hover:text-white transition-colors text-sm">Contact</a>
           </nav>
         </div>

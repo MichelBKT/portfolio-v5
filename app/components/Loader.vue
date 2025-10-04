@@ -54,8 +54,8 @@ watch(() => props.isLoading, (newVal) => {
           <!-- Loader Circle Animation -->
           <div class="relative w-32 h-32 mx-auto">
             <div class="absolute inset-0 rounded-full border-4 border-purple-500/20 loader-ring" />
-            <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-purple-500 border-r-pink-500 animate-spin" />
-            <div class="absolute inset-4 rounded-full border-4 border-transparent border-t-pink-500 border-r-purple-500 animate-spin" style="animation-duration: 1.5s; animation-direction: reverse;" />
+            <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-purple-500 border-r-indigo-500 animate-spin" />
+            <div class="absolute inset-4 rounded-full border-4 border-transparent border-t-indigo-500 border-r-purple-500 animate-spin" style="animation-duration: 1.5s; animation-direction: reverse;" />
             <div class="absolute inset-0 flex items-center justify-center">
               <img
                 ref="logoRef"
@@ -77,7 +77,7 @@ watch(() => props.isLoading, (newVal) => {
             <h2 class="text-2xl font-bold gradient-text">Chargement en cours...</h2>
             <div class="flex justify-center gap-1">
               <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="animation-delay: 0s;" />
-              <div class="w-2 h-2 bg-pink-500 rounded-full animate-bounce" style="animation-delay: 0.2s;" />
+              <div class="w-2 h-2 bg-indigo-500 rounded-full animate-bounce" style="animation-delay: 0.2s;" />
               <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="animation-delay: 0.4s;" />
             </div>
           </div>

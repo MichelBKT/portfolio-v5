@@ -31,7 +31,7 @@ export const skills: SkillsData = {
       contexts: ['Projets complexes', 'Patterns de design'],
       inMyJob: false,
       recentlyDeveloped: true,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-indigo-500'
     },
     {
       name: 'Gestion de Base de Données',
@@ -105,7 +105,7 @@ export const skills: SkillsData = {
       contexts: ['Nouvelles technologies', 'Open source'],
       inMyJob: false,
       recentlyDeveloped: false,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-indigo-500'
     },
     {
       name: 'Résolution de Problèmes',

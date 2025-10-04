@@ -78,7 +78,7 @@ onMounted(() => {
             </h2>
             <div class="relative">
               <!-- Vertical Line -->
-              <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-purple-500" />
+              <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-indigo-500 to-purple-500" />
 
               <!-- Timeline Events -->
               <div class="space-y-8">
@@ -89,7 +89,7 @@ onMounted(() => {
                   :style="{ animationDelay: `${index * 0.2}s` }"
                 >
                   <!-- Year Circle -->
-                  <div class="absolute left-0 w-20 h-20 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center border-4 border-black shadow-lg">
+                  <div class="absolute left-0 w-20 h-20 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center border-4 border-black shadow-lg">
                     <span class="text-white text-xs font-bold">{{ event.year }}</span>
                   </div>
 
