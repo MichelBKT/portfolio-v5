@@ -26,7 +26,7 @@ const toggleMobileDropdown = () => {
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center gap-8">
           <a href="#home" class="text-white/70 hover:text-white transition-colors">Accueil</a>
-          <a href="#about" class="text-white/70 hover:text-white transition-colors">A propos de moi</a>
+          <a href="/about" class="text-white/70 hover:text-white transition-colors">A propos de moi</a>
           <div class="relative inline-flex">
             <button
               class="text-white/70 hover:text-white transition-colors flex items-center gap-1 "
@@ -69,8 +69,8 @@ const toggleMobileDropdown = () => {
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="collapse hidden md:hidden pb-4  bg-[#0a0a0f]/90">
         <div class="flex flex-col gap-4 ml-68">
-          <a href="#home" class="text-white/70 hover:text-white transition-colors">Accueil</a>
-          <a href="#about" class="text-white/70 hover:text-white transition-colors">A propos de moi</a>
+          <a href="/index" class="text-white/70 hover:text-white transition-colors">Accueil</a>
+          <a href="/about" class="text-white/70 hover:text-white transition-colors">A propos de moi</a>
 
           <!-- Mobile Dropdown -->
           <div class="flex flex-col">
