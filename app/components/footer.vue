@@ -14,13 +14,13 @@
           </p>
           <div class="flex gap-4">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-purple-400 transition-colors">
-              <span class="icon-[tabler--brand-github] size-6"></span>
+              <span class="icon-[tabler--brand-github] size-6" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-purple-400 transition-colors">
-              <span class="icon-[tabler--brand-linkedin] size-6"></span>
+              <span class="icon-[tabler--brand-linkedin] size-6" />
             </a>
             <a href="mailto:contact@michelbanckaert.fr" class="text-white/70 hover:text-purple-400 transition-colors">
-              <span class="icon-[tabler--mail] size-6"></span>
+              <span class="icon-[tabler--mail] size-6" />
             </a>
           </div>
         </div>

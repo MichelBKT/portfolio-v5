@@ -1,25 +1,12 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 import { profile, epitechInfo } from '~/data/profile'
 import epitechLogo from '~/assets/images/epitech_logo_bleu.png'
 import memoji from '~/assets/images/memoji.png'
-
-// Generate stars for background
-const stars = ref<Array<{top: string, left: string, delay: string}>>([])
-
-onMounted(() => {
-  for (let i = 0; i < 100; i++) {
-    stars.value.push({
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
-      delay: `${Math.random() * 3}s`
-    })
-  }
-})
 </script>
 
 <template>
   <div>
+
     <!-- Hero Section -->
     <section class="pt-32 pb-20 px-4 relative z-10">
       <div class="max-w-7xl mx-auto">
@@ -58,7 +45,9 @@ onMounted(() => {
             <div class="glass-card p-8 rounded-3xl space-y-4">
               <h3 class="text-2xl font-bold gradient-text flex items-center gap-3">
                 <span class="icon-[tabler--school] size-7" />
-                <img :src="epitechLogo" :alt="epitechInfo.title" class="w-32 h-auto rounded-lg shadow-lg">
+                <a href="https://epitech.eu" target="_blank" rel="noopener noreferrer" title="Visitez le site web d'Epitech" class="hover:scale-105 transition-transform">
+                  <img :src="epitechLogo" :alt="epitechInfo.title" class="w-32 h-auto rounded-lg shadow-lg">
+                </a>
               </h3>
               <p
                 v-for="(paragraph, index) in epitechInfo.description"
@@ -141,6 +130,7 @@ onMounted(() => {
         <a
           href="/CV_Michel_BANCKAERT_v15.pdf"
           target="_blank"
+          title="Cliquez pour télécharger mon CV au format PDF"
           class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full transition-colors"
         >
           Télécharger le CV

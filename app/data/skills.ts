@@ -17,7 +17,7 @@ export const skills: SkillsData = {
   'savoir-faire': [
     {
       name: 'Développement Full-Stack',
-      icon: '💻',
+      icon: 'icon-[tabler--code]',
       description: 'Conception et développement d\'applications web complètes',
       contexts: ['Projets personnels', 'Formation Epitech'],
       inMyJob: true,
@@ -26,7 +26,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Architecture Logicielle',
-      icon: '🏗️',
+      icon: 'icon-[tabler--building]',
       description: 'Conception d\'architectures évolutives et maintenables',
       contexts: ['Projets complexes', 'Patterns de design'],
       inMyJob: false,
@@ -35,7 +35,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Gestion de Base de Données',
-      icon: '🗄️',
+      icon: 'icon-[tabler--database]',
       description: 'Conception, optimisation et administration de BDD',
       contexts: ['MySQL', 'MongoDB', 'PostgreSQL'],
       inMyJob: true,
@@ -44,7 +44,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'DevOps & Déploiement',
-      icon: '🚀',
+      icon: 'icon-[tabler--rocket]',
       description: 'Containerisation, CI/CD et automatisation',
       contexts: ['Docker', 'Git workflows', 'Nginx'],
       inMyJob: false,
@@ -53,7 +53,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Tests & Qualité Code',
-      icon: '🧪',
+      icon: 'icon-[tabler--test-pipe]',
       description: 'Tests unitaires, intégration et bonnes pratiques',
       contexts: ['Jest', 'Testing patterns', 'Code review'],
       inMyJob: false,
@@ -62,7 +62,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Cybersécurité',
-      icon: '🔐',
+      icon: 'icon-[tabler--shield-lock]',
       description: 'Sécurisation des applications et infrastructures',
       contexts: ['TryHackMe', 'Pentesting', 'Vulnérabilités'],
       inMyJob: false,
@@ -73,7 +73,7 @@ export const skills: SkillsData = {
   'savoir-etre': [
     {
       name: 'Adaptabilité',
-      icon: '🔄',
+      icon: 'icon-[tabler--refresh]',
       description: 'Capacité à s\'adapter rapidement aux nouvelles technologies',
       contexts: ['Reconversion réussie', 'Veille technologique'],
       inMyJob: true,
@@ -82,7 +82,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Autonomie',
-      icon: '🎯',
+      icon: 'icon-[tabler--target]',
       description: 'Capacité à mener des projets de bout en bout',
       contexts: ['Projets personnels', 'Auto-formation'],
       inMyJob: true,
@@ -91,7 +91,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Esprit d\'équipe',
-      icon: '🤝',
+      icon: 'icon-[tabler--users]',
       description: 'Collaboration efficace et partage de connaissances',
       contexts: ['Projets de groupe', 'Pair programming'],
       inMyJob: true,
@@ -100,7 +100,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Curiosité Technique',
-      icon: '🔍',
+      icon: 'icon-[tabler--search]',
       description: 'Passion pour l\'apprentissage continu et l\'innovation',
       contexts: ['Nouvelles technologies', 'Open source'],
       inMyJob: false,
@@ -109,7 +109,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Résolution de Problèmes',
-      icon: '🧩',
+      icon: 'icon-[tabler--puzzle]',
       description: 'Approche méthodique pour résoudre les défis techniques',
       contexts: ['Debugging', 'Optimisation', 'Innovation'],
       inMyJob: true,
@@ -118,7 +118,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Communication',
-      icon: '💬',
+      icon: 'icon-[tabler--message-circle]',
       description: 'Vulgarisation technique et documentation claire',
       contexts: ['Documentation projet', 'Présentation'],
       inMyJob: true,
@@ -127,7 +127,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Rigueur Professionnelle',
-      icon: '📋',
+      icon: 'icon-[tabler--clipboard-check]',
       description: 'Méthodologie issue de l\'expérience en comptabilité',
       contexts: ['Gestion des paies', 'Processus qualité'],
       inMyJob: true,
@@ -136,7 +136,7 @@ export const skills: SkillsData = {
     },
     {
       name: 'Leadership Technique',
-      icon: '👨‍💻',
+      icon: 'icon-[tabler--award]',
       description: 'Capacité à guider et mentorer sur les aspects techniques',
       contexts: ['Projets étudiants', 'Code review'],
       inMyJob: false,

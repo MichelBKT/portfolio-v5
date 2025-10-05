@@ -16,7 +16,7 @@ export const technologies: TechData = {
   frontend: [
     {
       name: 'HTML5',
-      icon: '🌐',
+      icon: 'icon-[skill-icons--html]',
       projects: ['Garage Parrot', 'Jobspot', 'Agilix'],
       recentlyLearned: false,
       inMyJob: true,
@@ -24,7 +24,7 @@ export const technologies: TechData = {
     },
     {
       name: 'CSS3',
-      icon: '🎨',
+      icon: 'icon-[skill-icons--css]',
       projects: ['Garage Parrot', 'Agilix', 'Portfolio', 'Jobspot'],
       recentlyLearned: false,
       inMyJob: true,
@@ -32,7 +32,7 @@ export const technologies: TechData = {
     },
     {
       name: 'JavaScript',
-      icon: '⚡',
+      icon: 'icon-[skill-icons--javascript]',
       projects: ['Agilix', 'IRC', 'Portfolio', 'Garage Parrot'],
       recentlyLearned: false,
       inMyJob: true,
@@ -40,7 +40,7 @@ export const technologies: TechData = {
     },
     {
       name: 'TypeScript',
-      icon: '🛡️',
+      icon: 'icon-[skill-icons--typescript]',
       projects: ['Portfolio'],
       recentlyLearned: true,
       inMyJob: false,
@@ -48,7 +48,7 @@ export const technologies: TechData = {
     },
     {
       name: 'React',
-      icon: '⚛️',
+      icon: 'icon-[skill-icons--react-dark]',
       projects: ['Agilix', 'IRC', 'Portfolio'],
       recentlyLearned: false,
       inMyJob: false,
@@ -56,25 +56,34 @@ export const technologies: TechData = {
     },
     {
       name: 'Figma',
-      icon: '🎯',
+      icon: 'icon-[skill-icons--figma-dark]',
       projects: ['Portfolio', 'Agilix'],
       recentlyLearned: true,
       inMyJob: false,
       color: 'from-purple-500 to-indigo-500'
     },
     {
-      name: 'MongoDB',
-      icon: '🌿',
-      projects: ['IRC'],
-      recentlyLearned: false,
+      name: 'Tailwind CSS',
+      icon: 'icon-[skill-icons--tailwindcss-dark]',
+      projects: ['Agilix', 'Portfolio'],
+      recentlyLearned: true,
       inMyJob: false,
+      color: 'from-sky-400 to-sky-600'
+    },
+    {
+      name: 'Nuxt.js',
+      icon: 'icon-[skill-icons--nuxtjs-dark]',
+      projects: ['Portfolio'],
+      recentlyLearned: true,
+      inMyJob: true,
       color: 'from-green-400 to-green-600'
     }
+
   ],
   backend: [
     {
       name: 'Node.js',
-      icon: '🟢',
+      icon: 'icon-[skill-icons--nodejs-dark]',
       projects: ['Agilix', 'IRC'],
       recentlyLearned: false,
       inMyJob: true,
@@ -82,7 +91,7 @@ export const technologies: TechData = {
     },
     {
       name: 'Express',
-      icon: '🚀',
+      icon: 'icon-[skill-icons--expressjs-dark]',
       projects: ['IRC'],
       recentlyLearned: false,
       inMyJob: false,
@@ -90,7 +99,7 @@ export const technologies: TechData = {
     },
     {
       name: 'PHP',
-      icon: '🐘',
+      icon: 'icon-[skill-icons--php-dark]',
       projects: ['Garage Parrot', 'Jobspot', 'NSA'],
       recentlyLearned: false,
       inMyJob: true,
@@ -98,7 +107,7 @@ export const technologies: TechData = {
     },
     {
       name: 'Symfony',
-      icon: '🎼',
+      icon: 'icon-[skill-icons--symfony-dark]',
       projects: ['Garage Parrot'],
       recentlyLearned: false,
       inMyJob: true,
@@ -106,7 +115,7 @@ export const technologies: TechData = {
     },
     {
       name: 'Laravel',
-      icon: '🔴',
+      icon: 'icon-[skill-icons--laravel-dark]',
       projects: ['Jobspot'],
       recentlyLearned: true,
       inMyJob: false,
@@ -114,7 +123,7 @@ export const technologies: TechData = {
     },
     {
       name: 'Java',
-      icon: '☕',
+      icon: 'icon-[skill-icons--java-dark]',
       projects: ['RPG Empire'],
       recentlyLearned: true,
       inMyJob: false,
@@ -122,7 +131,7 @@ export const technologies: TechData = {
     },
     {
       name: 'Python',
-      icon: '🐍',
+      icon: 'icon-[skill-icons--python-dark]',
       projects: ['RPG HD2D', 'Cybersecurity'],
       recentlyLearned: true,
       inMyJob: false,
@@ -130,7 +139,7 @@ export const technologies: TechData = {
     },
     {
       name: 'Linux',
-      icon: '🐧',
+      icon: 'icon-[skill-icons--linux-dark]',
       projects: ['NSA', 'Cybersecurity'],
       recentlyLearned: true,
       inMyJob: true,
@@ -138,7 +147,7 @@ export const technologies: TechData = {
     },
     {
       name: 'JetBrains',
-      icon: '🧠',
+      icon: 'icon-[skill-icons--idea-dark]',
       projects: ['Développement'],
       recentlyLearned: false,
       inMyJob: true,
@@ -146,11 +155,19 @@ export const technologies: TechData = {
     },
     {
       name: 'MySQL',
-      icon: '🐬',
+      icon: 'icon-[skill-icons--mysql-dark]',
       projects: ['Base de données'],
       recentlyLearned: false,
       inMyJob: true,
       color: 'from-blue-600 to-blue-600'
-    }
+    },
+   {
+      name: 'MongoDB',
+      icon: 'icon-[skill-icons--mongodb]',
+      projects: ['IRC'],
+      recentlyLearned: false,
+      inMyJob: false,
+      color: 'from-green-400 to-green-600'
+   }
   ]
 }

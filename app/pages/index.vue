@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
+import confetti from 'canvas-confetti'
 import logoVPDive from '~/assets/images/logo-VPDive.png'
 import logoSOGETREL from '~/assets/images/logo-SOGETREL.png'
 import logoALMH from '~/assets/images/logo-ALMH.png'
@@ -12,12 +13,10 @@ import { skills } from '~/data/skills'
 // Loading state
 const isLoading = ref(true)
 
-// Generate stars for background
-const stars = ref<Array<{top: string, left: string, delay: string}>>([])
-
 // AI Generation state
 const isGenerating = ref(false)
 const showImage = ref(false)
+const imageContainer = ref<HTMLElement | null>(null)
 
 const handleGenerate = () => {
   isGenerating.value = true
@@ -30,15 +29,64 @@ const handleGenerate = () => {
   }, 3500) // 3.5 seconds pour l'animation du loader
 }
 
-onMounted(() => {
-  for (let i = 0; i < 100; i++) {
-    stars.value.push({
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
-      delay: `${Math.random() * 3}s`
-    })
-  }
+// Déclencher les confettis quand l'image est révélée
+watch(showImage, (newValue) => {
+  if (newValue) {
+    // Petit délai pour que l'image soit montée dans le DOM
+    setTimeout(() => {
+      if (!imageContainer.value) {
+        console.log('imageContainer not found')
+        return
+      }
 
+      const rect = imageContainer.value.getBoundingClientRect()
+      const x = (rect.left + rect.width / 2) / window.innerWidth
+      const y = (rect.top + rect.height / 2) / window.innerHeight
+
+      console.log('Firing confetti at:', { x, y })
+
+      // Confettis explosant depuis l'image
+      const count = 200
+      const defaults = {
+        origin: { x, y },
+        zIndex: 9999
+      }
+
+      function fire(particleRatio: number, opts: confetti.Options) {
+        confetti({
+          ...defaults,
+          ...opts,
+          particleCount: Math.floor(count * particleRatio)
+        })
+      }
+
+      fire(0.25, {
+        spread: 26,
+        startVelocity: 55,
+      })
+      fire(0.2, {
+        spread: 60,
+      })
+      fire(0.35, {
+        spread: 100,
+        decay: 0.91,
+        scalar: 0.8
+      })
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 25,
+        decay: 0.92,
+        scalar: 1.2
+      })
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 45,
+      })
+    }, 200)
+  }
+})
+
+onMounted(() => {
   // Simulate page load - hide loader after content is ready
   setTimeout(() => {
     isLoading.value = false
@@ -51,36 +99,21 @@ onMounted(() => {
     <!-- Loading Screen -->
     <Loader :is-loading="isLoading" />
 
-    <div class="min-h-screen relative">
-      <!-- Animated Starfield Background -->
-      <div class="starfield">
-        <div
-          v-for="(star, index) in stars"
-          :key="index"
-          class="star"
-          :style="{
-            top: star.top,
-            left: star.left,
-            animationDelay: star.delay
-          }"
-        />
-      </div>
-
-      <!-- Hero Section -->
-        <section id="home" class="pt-32 pb-20 px-4 relative z-10">
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 relative z-10">
           <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
               <!-- Left Content -->
               <div class="space-y-6">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-600/20 border border-purple-500/30">
                   <span class="icon-[tabler--sparkles] text-purple-600 size-5"/>
-                  <span class="text-purple-400 text-sm font-medium">Apprenti Développeur web</span>
-                  <span class="text-white/70 text-sm">Quand travail rime avec passion</span>
+                  <span class="text-purple-400 lg:text-sm text-xs font-medium">Développeur web</span>
+                  <span class="text-white/70 lg:text-sm text-xs">Travail passion & plaisir</span>
                 </div>
 
                 <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight">
                   Vers une spécialisation en tant que
-                  <span class="gradient-text">Data engineer</span>
+                  <span class="gradient-text">Data Engineer</span>
                 </h1>
 
                 <p class="text-white/70 text-lg max-w-xl">
@@ -96,7 +129,7 @@ onMounted(() => {
                     >
                     <button
                       :disabled="isGenerating"
-                      class="absolute right-2 top-1/2 -translate-y-1/2 btn-gradient rounded-full px-6 py-2 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                      class="absolute right-2 top-1/2 -translate-y-1/2 btn-gradient rounded-full px-6 py-2 mr-2 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                       @click="handleGenerate"
                     >
                       <span class="icon-[tabler--stars] size-5" :class="{ 'animate-spin': isGenerating }"/>
@@ -150,7 +183,7 @@ onMounted(() => {
                     </div>
 
                     <!-- Image Reveal State -->
-                    <div v-if="showImage" class="w-full h-full image-reveal flex ml-10 justify-center items-center" style="animation-delay: 0s;">
+                    <div v-if="showImage" ref="imageContainer" class="w-full h-full image-reveal flex ml-10 justify-center items-center" style="animation-delay: 0s;">
                       <img
                         src="../assets/images/portrait.png"
                         alt="portrait de Michel Banckaert"
@@ -165,64 +198,64 @@ onMounted(() => {
               </div>
             </div>
           </div>
-        </section>
+    </section>
 
-        <!-- Featured Companies -->
-        <section class="py-10 px-4 border-t border-white/5 relative z-10 bg-gradient-to-b from-gray-900/50 to-gray-700/20">
+    <!-- Featured Companies -->
+    <section class="py-10 px-4 border-t border-white/5 relative z-10 bg-gradient-to-b from-gray-900/50 to-gray-700/20">
           <div class="max-w-7xl mx-auto">
             <p class="text-center text-white/50 text-sm uppercase tracking-wider mb-8">ENTREPRISES SUR MON CV</p>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-70 hover:opacity-100 transition-opacity">
               <div class="flex items-center justify-center">
-                <a href="https://vpdive.com" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-110">
+                <a href="https://vpdive.com" target="_blank" rel="noopener noreferrer" title="Visitez le site web de VPDive" class="transition-transform hover:scale-110">
                   <img :src="logoVPDive" alt="VPDive" class="h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all vpdive-blink" >
                 </a>
               </div>
               <div class="flex items-center justify-center">
-                <a href="https://sogetrel.fr" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-110">
+                <a href="https://sogetrel.fr" target="_blank" rel="noopener noreferrer" title="Visitez le site web de Sogetrel" class="transition-transform hover:scale-110">
                   <img :src="logoSOGETREL" alt="Sogetrel" class="h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all" >
                 </a>
               </div>
               <div class="flex items-center justify-center">
-                <a href="https://les-maisons-hospitalieres.fr" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-110">
+                <a href="https://les-maisons-hospitalieres.fr" target="_blank" rel="noopener noreferrer" title="Visitez le site web des Maisons Hospitalières de Nancy" class="transition-transform hover:scale-110">
                   <img :src="logoALMH" alt="ALMH" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all" >
                 </a>
               </div>
               <div class="flex items-center justify-center">
-                <a href="https://www.adapah54.fr" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-110">
+                <a href="https://www.adapah54.fr" target="_blank" rel="noopener noreferrer" title="Visitez le site web d'Adapah Nord54" class="transition-transform hover:scale-110">
                   <img :src="logoAdapah" alt="Adapah" class="h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all" >
                 </a>
               </div>
               <div class="flex items-center justify-center">
-                <a href="https://www.studi.com/fr" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-110">
+                <a href="https://www.studi.com/fr" target="_blank" rel="noopener noreferrer" title="Visitez le site de Studi" class="transition-transform hover:scale-110">
                   <img :src="logoStudi" alt="Studi" class="h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all" >
                 </a>
               </div>
               <div class="flex items-center justify-center">
-                <a href="https://www.cic.fr" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-110">
+                <a href="https://www.cic.fr" target="_blank" rel="noopener noreferrer" title="Visitez le site web du CIC" class="transition-transform hover:scale-110">
                   <img :src="logoCic" alt="CIC" class="h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all" >
                 </a>
               </div>
             </div>
           </div>
-        </section>
+    </section>
 
-        <!-- Creativity Section -->
-        <section class="py-20 px-4 relative z-10">
+    <!-- Creativity Section -->
+    <section class="py-20 px-4 relative z-10">
           <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
               <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
                 Développer de la <span class="gradient-text">Créativité</span> avec Rigueur et Persévérance
               </h2>
               <p class="text-white/70 text-lg max-w-3xl mx-auto">
-                Mon apprentissage chez <a href="https://vpdive.com" target="_blank" rel="noopener noreferrer" class="vpdive-blink font-semibold cursor-pointer">VPDive</a>
+                Mon apprentissage chez <a href="https://vpdive.com" target="_blank" rel="noopener noreferrer" title="Visitez le site web de VPDive" class="vpdive-blink font-semibold cursor-pointer">VPDive</a>
                 me permet de laisser libre cours à ma créativité tout en développant une rigueur professionnelle essentielle. Chaque projet est une opportunité d'innover, d'explorer de nouvelles idées et de repousser les limites de mes compétences techniques. La persévérance est au cœur de mon approche, car je crois que c'est en surmontant les défis que l'on grandit le plus. En combinant créativité, rigueur et persévérance, je m'efforce de créer des solutions web qui sont non seulement fonctionnelles mais aussi esthétiquement plaisantes et innovantes.
               </p>
             </div>
           </div>
-        </section>
+    </section>
 
-        <!-- Platform Cards Section -->
-        <section class="py-20 px-4 relative z-10">
+    <!-- Platform Cards Section -->
+    <section class="py-20 px-4 relative z-10">
           <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
               <p class="text-purple-400 text-sm uppercase tracking-wider mb-4">MES COMPÉTENCES</p>
@@ -247,7 +280,7 @@ onMounted(() => {
                     :key="tech.name"
                     class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium hover:bg-white/20 transition-colors cursor-pointer"
                   >
-                    <span>{{ tech.icon }}</span>
+                    <span :class="tech.icon" class="size-4" />
                     <span>{{ tech.name }}</span>
                   </span>
                 </div>
@@ -265,7 +298,7 @@ onMounted(() => {
                     :key="tech.name"
                     class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium hover:bg-white/20 transition-colors cursor-pointer"
                   >
-                    <span>{{ tech.icon }}</span>
+                    <span :class="tech.icon" class="size-4" />
                     <span>{{ tech.name }}</span>
                   </span>
                 </div>
@@ -283,7 +316,7 @@ onMounted(() => {
                     class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium hover:bg-white/20 transition-colors cursor-pointer"
                     :title="skill.description"
                   >
-                    <span>{{ skill.icon }}</span>
+                    <span :class="skill.icon" class="size-4" />
                     <span>{{ skill.name }}</span>
                   </span>
                 </div>
@@ -304,7 +337,7 @@ onMounted(() => {
                     class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium hover:bg-white/20 transition-colors cursor-pointer"
                     :title="skill.description"
                   >
-                    <span>{{ skill.icon }}</span>
+                    <span :class="skill.icon" class="size-4" />
                     <span>{{ skill.name }}</span>
                   </span>
                 </div>
@@ -324,9 +357,8 @@ onMounted(() => {
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </div>
+    </section>
+  </div>
 </template>
 
 <style scoped>
