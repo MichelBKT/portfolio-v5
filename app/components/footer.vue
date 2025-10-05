@@ -31,9 +31,9 @@
           <nav class="flex flex-col space-y-2">
             <a href="/" class="text-white/70 hover:text-white transition-colors text-sm">Accueil</a>
             <a href="/about" class="text-white/70 hover:text-white transition-colors text-sm">A propos</a>
-            <a href="#projets" class="text-white/70 hover:text-white transition-colors text-sm">Projets</a>
-            <a href="#blog" class="text-white/70 hover:text-white transition-colors text-sm">Blog</a>
-            <a href="#contact" class="text-white/70 hover:text-white transition-colors text-sm">Contact</a>
+            <a href="/projects" class="text-white/70 hover:text-white transition-colors text-sm">Projets</a>
+            <a href="/blog" class="text-white/70 hover:text-white transition-colors text-sm">Blog</a>
+            <a href="/contact" class="text-white/70 hover:text-white transition-colors text-sm">Contact</a>
           </nav>
         </div>
 
@@ -52,8 +52,8 @@
         <div>
           <h6 class="text-white font-semibold mb-4">Contact</h6>
           <div class="flex flex-col space-y-2 text-white/70 text-sm">
-            <a href="mailto:contact@michelbanckaert.fr" class="hover:text-white transition-colors">
-              contact@michelbanckaert.fr
+            <a href="mailto:michel.banckaert@epitech.eu" class="hover:text-white transition-colors">
+              michel.banckaert@epitech.eu
             </a>
             <span>Nancy, France</span>
           </div>

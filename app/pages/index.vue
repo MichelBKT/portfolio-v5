@@ -150,11 +150,11 @@ onMounted(() => {
                     </div>
 
                     <!-- Loader State - AI Working Animation -->
-                    <div v-if="isGenerating" class="text-center space-y-6 w-full px-8">
+                    <div v-if="isGenerating" class="text-center space-y-10 w-full px-8">
                       <!-- AI Brain Animation -->
                       <div class="relative">
                         <div class="ai-loader-circle"/>
-                        <span class="icon-[tabler--brain] text-purple-400 size-24 relative z-10 mb-4"/>
+                        <span class="icon-[tabler--brain] text-purple-400 size-18 relative z-10"/>
                       </div>
 
                       <!-- Progress Bar -->
@@ -368,8 +368,8 @@ onMounted(() => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border: 3px solid rgba(168, 85, 247, 0.2);
   border-top-color: rgb(168, 85, 247);
   border-radius: 50%;

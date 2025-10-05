@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     id: 'year-end',
     title: 'RPG HD2D',
-    subtitle: 'en cours',
+    subtitle: 'JUIN - SEPTEMBRE 25 | UNREAL ENGINE - C++',
     description: 'Ce projet est une démo technique d\'un RPG en 2.5D avec une vue isométrique et un style HD2D, se déroulant dans un monde ouvert.',
     image: '/images/unrealengine.jpg',
     technologies: ['Unreal', 'C++', 'Python'],
@@ -28,7 +28,7 @@ export const projects: Project[] = [
       'Système de quêtes',
     ],
     github: null,
-    demo: null
+    demo: '/videos/Teaser-RPG HD2D‑ Made with FlexClip - Copie.mp4'
   },
   {
     id: 'cybersec',

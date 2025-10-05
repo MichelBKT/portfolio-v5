@@ -66,14 +66,15 @@ onUnmounted(() => {
               class="absolute top-full right-0 mt-2 glass-card min-w-48 p-2 rounded-xl"
               role="menu"
             >
-              <li><a class="block px-4 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#feature1">Data</a></li>
-              <li><a class="block px-4 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#feature2">Cyber</a></li>
-              <li><a class="block px-4 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#feature3">Jeux-vidéo</a></li>
-              <li><a class="block px-4 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#feature4">Dev web</a></li>
+              <li><a class="block px-4 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="/projects">Tous</a></li>
+              <li><a class="block px-4 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="/projects#jeux-video">Jeux-vidéo</a></li>
+              <li><a class="block px-4 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="/projects#cybersecurite">Cybersécurité</a></li>
+              <li><a class="block px-4 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="/projects#web">Web</a></li>
+              <li><a class="block px-4 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="/projects#devops">DevOps</a></li>
             </ul>
           </div>
-          <a href="#blog" class="text-white/70 hover:text-white transition-colors">Blog</a>
-          <a href="#contact" class="text-white/70 hover:text-white transition-colors">Contact</a>
+          <a href="/blog" class="text-white/70 hover:text-white transition-colors">Blog</a>
+          <a href="/contact" class="text-white/70 hover:text-white transition-colors">Contact</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -120,16 +121,17 @@ onUnmounted(() => {
                 v-show="isMobileDropdownOpen"
                 class="flex flex-col gap-2 mt-2 ml-4 overflow-hidden"
               >
-                <a class="text-white/60 hover:text-white transition-colors text-sm" href="#feature1">Data</a>
-                <a class="text-white/60 hover:text-white transition-colors text-sm" href="#feature2">Cyber</a>
-                <a class="text-white/60 hover:text-white transition-colors text-sm" href="#feature3">Jeux-vidéo</a>
-                <a class="text-white/60 hover:text-white transition-colors text-sm" href="#feature4">Dev web</a>
+                <a class="text-white/60 hover:text-white transition-colors text-sm" href="/projects">Tous</a>
+                <a class="text-white/60 hover:text-white transition-colors text-sm" href="/projects#jeux-video">Jeux-vidéo</a>
+                <a class="text-white/60 hover:text-white transition-colors text-sm" href="/projects#cybersecurite">Cybersécurité</a>
+                <a class="text-white/60 hover:text-white transition-colors text-sm" href="/projects#web">Web</a>
+                <a class="text-white/60 hover:text-white transition-colors text-sm" href="/projects#devops">DevOps</a>
               </div>
             </Transition>
           </div>
 
-          <a href="#blog" class="text-white/70 hover:text-white transition-colors">Blog</a>
-          <a href="#contact" class="text-white/70 hover:text-white transition-colors">Contact</a>
+          <a href="/blog" class="text-white/70 hover:text-white transition-colors">Blog</a>
+          <a href="/contact" class="text-white/70 hover:text-white transition-colors">Contact</a>
         </div>
       </div>
     </div>
