@@ -13,13 +13,13 @@
             Développeur Full-Stack passionné par l'innovation et les nouvelles technologies.
           </p>
           <div class="flex gap-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-purple-400 transition-colors">
+            <a href="https://github.com/MichelBKT" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-purple-400 transition-colors">
               <span class="icon-[tabler--brand-github] size-6" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-purple-400 transition-colors">
+            <a href="https://www.linkedin.com/in/michel-banckaert-54-devweb" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-purple-400 transition-colors">
               <span class="icon-[tabler--brand-linkedin] size-6" />
             </a>
-            <a href="mailto:contact@michelbanckaert.fr" class="text-white/70 hover:text-purple-400 transition-colors">
+            <a href="mailto:michel.banckaert@epitech.eu" class="text-white/70 hover:text-purple-400 transition-colors">
               <span class="icon-[tabler--mail] size-6" />
             </a>
           </div>
