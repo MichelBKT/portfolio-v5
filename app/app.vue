@@ -2,9 +2,12 @@
 import Navbar from "~/components/Navbar.vue"
 import Footer from "~/components/Footer.vue"
 import StarfieldBackground from "~/components/StarfieldBackground.vue"
+import { Analytics } from '@vercel/analytics/nuxt';
+
 </script>
 
 <template>
+  <Analytics />
   <div class="min-h-screen relative p-4 md:p-8">
     <NuxtRouteAnnouncer />
 
