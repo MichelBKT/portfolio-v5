@@ -2,6 +2,12 @@
 import { profile, epitechInfo } from '~/data/profile'
 import epitechLogo from '~/assets/images/epitech_logo_bleu.png'
 import memoji from '~/assets/images/memoji.png'
+
+// SEO
+useSEO({
+  title: 'À propos - Michel Banckaert | Mon Parcours',
+  description: 'Découvrez mon parcours de développeur Full-Stack, ma formation à Epitech, et mon expérience professionnelle. De la comptabilité à la data engineering.'
+})
 </script>
 
 <template>

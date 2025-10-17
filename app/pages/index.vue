@@ -10,6 +10,52 @@ import logoCic from '~/assets/images/logo-cic.png'
 import { technologies } from '~/data/technologies'
 import { skills } from '~/data/skills'
 
+// SEO Meta tags
+useHead({
+  title: 'Accueil - Michel Banckaert | Développeur Full-Stack',
+  meta: [
+    { name: 'description', content: 'Portfolio de Michel Banckaert, développeur Full-Stack spécialisé en Data Engineering. Découvrez mon parcours, mes projets web et mes compétences techniques.' },
+    { property: 'og:title', content: 'Michel Banckaert - Développeur Full-Stack & Data Engineer' },
+    { property: 'og:description', content: 'Développeur passionné par le web et la data. Découvrez mes projets et mon expertise technique.' },
+    { property: 'og:type', content: 'website' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Michel Banckaert',
+        jobTitle: 'Développeur Full-Stack & Data Engineer',
+        url: 'https://michel-bkt.vercel.app',
+        sameAs: [
+          'https://github.com/MichelBKT',
+          'https://www.linkedin.com/in/michel-banckaert-54-devweb'
+        ],
+        alumniOf: {
+          '@type': 'EducationalOrganization',
+          name: 'Epitech',
+          url: 'https://www.epitech.eu'
+        },
+        knowsAbout: [
+          'Développement Web',
+          'Data Engineering',
+          'Vue.js',
+          'React',
+          'Node.js',
+          'TypeScript',
+          'Cybersécurité'
+        ],
+        worksFor: {
+          '@type': 'Organization',
+          name: 'VPDive',
+          url: 'https://vpdive.com'
+        }
+      })
+    }
+  ]
+})
+
 // Loading state
 const isLoading = ref(true)
 
