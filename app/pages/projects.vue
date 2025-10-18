@@ -2,6 +2,12 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { projects } from '~/data/projects'
 
+// SEO
+useSEO({
+  title: 'Projets - Michel Banckaert | Portfolio de développeur',
+  description: 'Découvrez mes projets en développement web, cybersécurité, cybersécurité et jeux vidéo. RPG HD2D, applications web, projets data et plus encore.'
+})
+
 // Categories from projects
 const categories = ['tous', ...new Set(projects.map(p => p.category))]
 const selectedCategory = ref('tous')
