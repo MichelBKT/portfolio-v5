@@ -28,7 +28,7 @@ export const profile: ProfileData = {
       description: 'Facturation clients et relances'
     },
     {
-      year: '2014-2020',
+      year: '2014-2022',
       title: 'GESTIONNAIRE PAIE',
       description: 'Bulletins de paie et déclarations sociales'
     },
@@ -46,11 +46,6 @@ export const profile: ProfileData = {
       year: '2024-2027',
       title: 'EPITECH',
       description: 'Poursuite d\'études en informatique'
-    },
-    {
-      year: 'NOW',
-      title: 'PRESENT',
-      description: 'En route vers l\'expertise'
     }
   ]
 }

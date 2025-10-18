@@ -4,7 +4,7 @@ import { ref, onMounted } from 'vue'
 // SEO
 useSEO({
   title: 'Blog - Michel Banckaert | Bientôt disponible',
-  description: 'Blog technique sur le développement web, la data engineering et les nouvelles technologies. Articles, tutoriels et retours d\'expérience à venir.'
+  description: 'Blog technique sur le développement web, la cybersécurité et les nouvelles technologies. Articles, tutoriels et retours d\'expérience à venir.'
 })
 
 const isVisible = ref(false)

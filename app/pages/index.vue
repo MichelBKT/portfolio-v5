@@ -14,7 +14,7 @@ import { skills } from '~/data/skills'
 useHead({
   title: 'Accueil - Michel Banckaert | Développeur Full-Stack',
   meta: [
-    { name: 'description', content: 'Portfolio de Michel Banckaert, développeur Full-Stack spécialisé en Data Engineering. Découvrez mon parcours, mes projets web et mes compétences techniques.' },
+    { name: 'description', content: 'Portfolio de Michel Banckaert, développeur Full-Stack spécialisé en cybersécurité. Découvrez mon parcours, mes projets web et mes compétences techniques.' },
     { property: 'og:title', content: 'Michel Banckaert - Développeur Full-Stack & Data Engineer' },
     { property: 'og:description', content: 'Développeur passionné par le web et la data. Découvrez mes projets et mon expertise technique.' },
     { property: 'og:type', content: 'website' },
@@ -39,12 +39,11 @@ useHead({
         },
         knowsAbout: [
           'Développement Web',
-          'Data Engineering',
+          'Cybersécurité',
           'Vue.js',
           'React',
           'Node.js',
-          'TypeScript',
-          'Cybersécurité'
+          'TypeScript'
         ],
         worksFor: {
           '@type': 'Organization',
@@ -158,12 +157,15 @@ onMounted(() => {
                 </div>
 
                 <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  Vers une spécialisation en tant que
-                  <span class="gradient-text">Data Engineer</span>
+                  Vers une spécialisation en
+                  <span class="gradient-text">Cybersécurité</span>
                 </h1>
 
                 <p class="text-white/70 text-lg max-w-xl">
-                  Avec un passé de comptable, ce choix est comme une évidence. La gestion et l'analyse des données sont des compétences clés dans le domaine de la comptabilité. Je peux ainsi combiner mes connaissances comptables avec des compétences techniques avancées pour mieux comprendre et exploiter les données financières. Cela me permettra de contribuer de manière significative à la prise de décisions stratégiques basées sur des analyses de données approfondies.
+                  Avec un passé de comptable, ce choix ne fut pas une évidence. La gestion et l'analyse des données sont
+                  des compétences clés dans le domaine de la comptabilité. Combiner mes connaissances comptables avec
+                  cette rigueur analytique pour mieux comprendre les enjeux business, me permettra de contribuer de
+                  manière significative à la prise de décisions stratégiques basées sur des compétences cyber fortes.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">

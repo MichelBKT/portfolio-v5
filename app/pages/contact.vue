@@ -5,7 +5,7 @@ import confetti from 'canvas-confetti'
 // SEO
 useSEO({
   title: 'Contact - Michel Banckaert | Travaillons ensemble',
-  description: 'Contactez-moi pour discuter de vos projets web, data engineering ou pour toute opportunité professionnelle. Formulaire de contact sécurisé.'
+  description: 'Contactez-moi pour discuter de vos projets web, cybersécurité ou pour toute opportunité professionnelle. Formulaire de contact sécurisé.'
 })
 
 // Form data

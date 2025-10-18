@@ -1,5 +1,7 @@
-import { injectSpeedInsights } from '@vercel/speed-insights/nuxt'
+import { injectSpeedInsights } from '@vercel/speed-insights'
 
 export default defineNuxtPlugin(() => {
-  injectSpeedInsights()
+  if (process.client) {
+    injectSpeedInsights()
+  }
 })
