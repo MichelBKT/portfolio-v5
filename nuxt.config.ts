@@ -42,15 +42,16 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Michel Banckaert - Développeur Full-Stack',
+      title: 'Michel Banckaert - Développeur web',
       htmlAttrs: {
         lang: 'fr'
       },
       meta: [
-        { name: 'description', content: 'Portfolio de Michel Banckaert, développeur Full-Stack passionné par le développement web et la cybersécurité. Découvrez mes projets et compétences.' },
+        { name: 'description', content: 'Portfolio de Michel Banckaert, développeur web passionné par le développement web et la cybersécurité. Découvrez mes projets et compétences.' },
         { name: 'keywords', content: 'développeur web, full-stack, cybersécurité, Vue.js, React, Node.js, Nuxt, portfolio, Nancy, France' },
         { name: 'author', content: 'Michel Banckaert' },
         { name: 'robots', content: 'index, follow' },
+        { name:'google-site-verification', content: 'uXoEiwzxSYnE8Szs1CVVVChNEkT2_UIiw4B4QQJD'},
 
         // Open Graph / Facebook
         { property: 'og:type', content: 'website' },
