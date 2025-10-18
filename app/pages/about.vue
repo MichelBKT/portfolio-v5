@@ -134,7 +134,7 @@ useSEO({
         </h2>
         <p class="text-white/70 mb-8">Vous pouvez télécharger mon CV au format PDF en cliquant sur le bouton ci-dessous.</p>
         <a
-          href="/CV_Michel_BANCKAERT_v15.pdf"
+          href="/CV_Michel_BANCKAERT_v16.pdf"
           target="_blank"
           title="Cliquez pour télécharger mon CV au format PDF"
           class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full transition-colors"

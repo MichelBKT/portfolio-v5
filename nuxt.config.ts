@@ -23,6 +23,15 @@ export default defineNuxtConfig({
     },
   },
 
+  vite: {
+    css: {
+      devSourcemap: false
+    },
+    build: {
+      sourcemap: false
+    }
+  },
+
   icon: {
     serverBundle: {
       collections: ['tabler']
