@@ -51,21 +51,21 @@ export default defineNuxtConfig({
         { name: 'keywords', content: 'développeur web, full-stack, cybersécurité, Vue.js, React, Node.js, Nuxt, portfolio, Nancy, France' },
         { name: 'author', content: 'Michel Banckaert' },
         { name: 'robots', content: 'index, follow' },
-        { name:'google-site-verification', content: 'uXoEiwzxSYnE8Szs1CVVVChNEkT2_UIiw4B4QQJD'},
+        { name:'google-site-verification', content: 'uXoEiwzxSYnE8Szs1CVVVChNEkT2_UIiw4B4QQJDB3s' },
 
         // Open Graph / Facebook
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://michel-bkt.vercel.app' },
-        { property: 'og:title', content: 'Michel Banckaert - Développeur Full-Stack' },
-        { property: 'og:description', content: 'Portfolio de Michel Banckaert, développeur Full-Stack passionné par le développement web et la cybersécurité.' },
+        { property: 'og:title', content: 'Michel Banckaert - Développeur web' },
+        { property: 'og:description', content: 'Portfolio de Michel Banckaert, développeur web passionné par le développement web et la cybersécurité.' },
         { property: 'og:image', content: 'https://michel-bkt.vercel.app/og-image.jpg' },
         { property: 'og:locale', content: 'fr_FR' },
 
         // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://michel-bkt.vercel.app' },
-        { name: 'twitter:title', content: 'Michel Banckaert - Développeur Full-Stack & cybersécurité' },
-        { name: 'twitter:description', content: 'Portfolio de Michel Banckaert, développeur Full-Stack passionné par le développement web et la cybersécurité.' },
+        { name: 'twitter:title', content: 'Michel Banckaert - Développeur web' },
+        { name: 'twitter:description', content: 'Portfolio de Michel Banckaert, développeur web passionné par le développement web et la cybersécurité.' },
         { name: 'twitter:image', content: 'https://michel-bkt.vercel.app/og-image.jpg' },
 
         // Additional SEO
